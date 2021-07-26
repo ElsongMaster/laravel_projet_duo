@@ -21,7 +21,7 @@
             <div class="row">
 
                 <div class="col-sm-6 hidden-xs">
-                    <img class="img-carousel" src="/img/we-are-creative.jpg" alt="We are creative">
+                    <img class="img-carousel" src="{{asset('/img/we-are-creative.jpg')}}" alt="We are creative">
                 </div>
                 
                 <div class="col-sm-6 project yellow-bg">
