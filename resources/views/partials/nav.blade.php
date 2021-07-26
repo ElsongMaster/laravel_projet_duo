@@ -23,7 +23,5 @@
                 </li> 
             </ul><!-- /.navbar-nav -->
         </div><!-- /.navbar-collapse -->
-        
     </div>
-              
 </nav><!-- /.site-navigation -->

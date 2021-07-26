@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Projet;
+
 class portfolioController extends Controller
 {
     public function index() {
-    return view('pages.portfolio');
+        $datas = Projet::all();
+    return view('pages.portfolio',compact('datas'));
 }
 }
