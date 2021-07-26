@@ -9,7 +9,8 @@ use App\Models\Projet;
 class portfolioController extends Controller
 {
     public function index() {
-        $datas = Projet::all();
+        $table =  new Projet;
+        $datas = $table->get()->take(15);
     return view('pages.portfolio',compact('datas'));
 }
 }
