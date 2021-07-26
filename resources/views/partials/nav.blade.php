@@ -11,15 +11,15 @@
         <div class="main-menu" id="perfect-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                    <a href="index.html">Home</a></li>
+                    <a href="/">Home</a></li>
                 <li>
-                    <a href="blog.html">Blog </a>
+                    <a href="/blog">Blog </a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>                                
+                    <a href="/portfolio">Portfolio</a>                                
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="/contact">Contact</a>
                 </li> 
             </ul><!-- /.navbar-nav -->
         </div><!-- /.navbar-collapse -->

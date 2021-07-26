@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\indexController;
+use App\Http\Controllers\homeController;
+
+use App\Http\Controllers\contactController;
+
+use App\Http\Controllers\portfolioController;
+
+use App\Http\Controllers\blogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +20,12 @@ use App\Http\Controllers\indexController;
 |
 */
 
-Route::get('/',[indexController::class,'index'] );
+Route::get('/',[homeController::class,'index'] );
+
+Route::get('/blog',[blogController::class,'index'] );
+
+
+Route::get('/portfolio',[portfolioController::class,'index'] );
+
+
+Route::get('/contact',[contactController::class,'index'] );
