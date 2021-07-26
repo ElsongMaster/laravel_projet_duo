@@ -8,7 +8,8 @@ use App\Models\Article;
 class blogController extends Controller
 {
     public function index() {
-        $datas = Article::all();
+        $table = new Article;
+        $datas = $table->get()->take(4);
     return view('pages.blog',compact('datas'));
 }
 }
