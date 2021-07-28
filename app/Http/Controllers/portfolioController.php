@@ -3,17 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-use App\Models\Projet;
-class portfolioController extends Controller
-{
-    public function index() {
-        $table = new Projet;
-        $datas = $table->get()->take(15);
-    return view('pages.portfolio',compact('datas'));
-}
-}
-=======
 
 use App\Models\Projet;
 
@@ -36,5 +25,9 @@ class portfolioController extends Controller
         $newEntry->save();
         return redirect()->back();
     }
+    public function destroy(Projet $id) {
+        $datas = Projet::find($id);
+        $datas->delete();
+        return redirect()->back;
+    }
 }
->>>>>>> f3e2a4c5f55c3d0d0c53159a36a609af94681d2d

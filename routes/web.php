@@ -36,3 +36,5 @@ Route::get('/backoffice/portfolio', [portfolioController::class, 'index'])->name
 Route::get('/projets/create' , [portfolioController::class, 'create'])->name('create');
 
 Route::post('/projets', [portfolioController::class, 'store'])->name('store');
+
+Route::delete('projets/{id}/delete' ,[portfolioController::class, 'destroy']);
