@@ -43,5 +43,4 @@ Route::delete('projets/{id}/delete' ,[portfolioController::class, 'destroy']);
 
 Route::get('/backoffice/home',[backHomecController::class, 'index'])->name('backHome');
 
-
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
