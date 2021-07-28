@@ -11,12 +11,12 @@
       </tr>
     </thead>
     <tbody>
+      @foreach ($datas as $item)
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <th scope="row">{{$item->titre}}</th>
+        <td>{{$item->description}}</td>
       </tr>
+      @endforeach
     </tbody>
   </table>
 @endsection
