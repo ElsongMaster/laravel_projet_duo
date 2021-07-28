@@ -12,5 +12,17 @@ class portfolioController extends Controller
         $table =  new Projet;
         $datas = $table->get()->take(15);
     return view('pages.portfolio',compact('datas'));
+
 }
+    public function create() {
+        return view('backoffice.portfolio');
+    }
+
+    public function store(Request $request){
+        $newEntry = Projet::all();
+        $newEntry->titre->$request->titre;
+        $newEntry->description->$request->description;
+        $newEntry->save();
+        return redirect()->back();
+    }
 }
