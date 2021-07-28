@@ -11,6 +11,7 @@ use App\Http\Controllers\blogController;
 use App\Http\Controllers\backofficeController;
 use App\Http\Controllers\backHomeController;
 use App\Http\Controllers\backBlogController;
+use App\Http\Controllers\backPortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,14 +34,14 @@ Route::get('/backoffice',[backofficeController::class, 'index'])->name('backoffi
 
 Route::get('/contact',[contactController::class,'index'] )->name('contact');
 
-Route::get('/backoffice/portfolio', [portfolioController::class, 'index'])->name('backPortfolio');
+Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
 
-Route::get('/projets/create' , [portfolioController::class, 'create'])->name('create');
+Route::get('/projets/create' , [backPortfolioController::class, 'create'])->name('create');
 
 Route::post('/projets', [portfolioController::class, 'store'])->name('store');
 
 Route::delete('projets/{id}/delete' ,[portfolioController::class, 'destroy']);
 
-Route::get('/backoffice/home',[backHomecController::class, 'index'])->name('backHome');
+Route::get('/backoffice/home',[backHomeController::class, 'index'])->name('backHome');
 
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
