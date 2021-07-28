@@ -9,6 +9,8 @@ use App\Http\Controllers\portfolioController;
 
 use App\Http\Controllers\blogController;
 use App\Http\Controllers\backofficeController;
+use App\Http\Controllers\backHomeController;
+use App\Http\Controllers\backBlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,9 @@ Route::get('/backoffice/portfolio', [portfolioController::class, 'index'])->name
 Route::get('/projets/create' , [portfolioController::class, 'create'])->name('create');
 
 Route::post('/projets', [portfolioController::class, 'store'])->name('store');
+
+
+Route::get('/backoffice/home',[backHomecController::class, 'index'])->name('backHome');
+
+
+Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
