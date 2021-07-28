@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class backofficeController extends Controller
 {
     public function index(){
-        return view('backoffice.homeBackOffice')
+        return view('backoffice.homeBackOffice');
     }
 }
