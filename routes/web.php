@@ -8,6 +8,7 @@ use App\Http\Controllers\contactController;
 use App\Http\Controllers\portfolioController;
 
 use App\Http\Controllers\blogController;
+use App\Http\Controllers\backofficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/portfolio',[portfolioController::class,'index'] );
 
 
 Route::get('/contact',[contactController::class,'index'] );
+
+Route::get('/backoffice',[backofficeController::Class, 'index'])->name('backoffice');

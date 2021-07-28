@@ -11,4 +11,7 @@ class portfolioController extends Controller
         $datas = $table->get()->take(15);
     return view('pages.portfolio',compact('datas'));
 }
+
+
+
 }
