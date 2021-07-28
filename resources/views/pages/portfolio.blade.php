@@ -4,17 +4,21 @@
 
 @section('content')
 <main id="main" class="site-main">
-
+    
     <section class="site-section-small portfolio">
-
+        
         <div class="container">
             <h1 class="section-title-big text-center">Portfolio</h1>
         </div>
-
+        
         <div class="container-fluid">
             <div class="row" id="grid">
+<<<<<<< HEAD
                 @foreach ($datas as $item )
                     
+=======
+                @foreach ($datas as $item)
+>>>>>>> f9d939f8cddde4d56a5ee7f31c02f3e1ab0caad8
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
                         <img src="{{asset($item->image)}}" alt="" class="img-carousel">
@@ -29,9 +33,11 @@
                     </a>
                 </div><!-- /.col-lg-fifth  -->
                 @endforeach
+<<<<<<< HEAD
                
+=======
+>>>>>>> f9d939f8cddde4d56a5ee7f31c02f3e1ab0caad8
             </div><!-- /#grid -->
-
         </div>
         
     </section><!-- /.portfolio -->
@@ -63,6 +69,6 @@
         </div>
         
     </section><!-- /.social-networks -->
-
+    
 </main><!-- /.site-main -->
 @endsection

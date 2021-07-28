@@ -29,6 +29,16 @@ Route::get('/blog',[blogController::class,'index'] );
 Route::get('/portfolio',[portfolioController::class,'index'] );
 
 
+<<<<<<< HEAD
 Route::get('/contact',[contactController::class,'index'] );
 
 Route::get('/backoffice',[backofficeController::Class, 'index'])->name('backoffice');
+=======
+Route::get('/contact',[contactController::class,'index'] )->name('contact');
+
+Route::get('/backoffice/portfolio', [portfolioController::class, 'index'])->name('backPortfolio');
+
+Route::get('/projets/create' , [portfolioController::class, 'create'])->name('create');
+
+Route::post('/projets', [portfolioController::class, 'store'])->name('store');
+>>>>>>> f9d939f8cddde4d56a5ee7f31c02f3e1ab0caad8
