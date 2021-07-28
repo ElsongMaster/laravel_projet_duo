@@ -2,9 +2,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{route('home')}}">Home</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{{route('backHome')}}">Home Backoffice</a>
-    </li>
+
     <li class="nav-item">
       <a class="nav-link" href="{{route('backBlog')}}">Blog Backoffice</a>
     </li>

@@ -30,9 +30,10 @@ Route::get('/blog',[blogController::class,'index'] );
 
 Route::get('/portfolio',[portfolioController::class,'index'] );
 
+Route::get('/contact',[contactController::class,'index'] )->name('contact');
+
 Route::get('/backoffice',[backofficeController::class, 'index'])->name('backoffice');
 
-Route::get('/contact',[contactController::class,'index'] )->name('contact');
 
 Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
 
@@ -42,10 +43,12 @@ Route::post('/projets' , [backPortfolioController::class, 'store'])->name('store
 
 Route::post('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('delete');
 
-Route::get('/backoffice/home',[backHomeController::class, 'index'])->name('backHome');
 
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
 
+Route::get('/articles/create',[backBlogController::class, 'create'])->name('createArticle');
 
 
+Route::post('/articles',[backBlogController::class, 'store'])->name('storeArticle');
 
+Route::delete('/articles/{id}/delete',[backBlogController::class, 'destroy'])->name('deleteArticle');
