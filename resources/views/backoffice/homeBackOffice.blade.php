@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    @include('backoffice.navBarOffice');
+    @include('backoffice.navBarOffice')
     @yield('backofficeContent')
 
     <script src="{{asset('js/app.js')}}"></script>
