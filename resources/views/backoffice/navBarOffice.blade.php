@@ -1,22 +1,15 @@
-<nav id="primary-navigation" class="site-navigation">
+<ul class="nav bg-dark d-flex justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('home')}}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{{route('backHome')}}">Home Backoffice</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('backBlog')}}">Blog Backoffice</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('backPortfolio')}}">Portfolio Backoffice</a>
+    </li>
+  </ul>
 
-    <div class="container-fluid">
-
-
-        <div class="main-menu" id="perfect-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                    <a href="{{route('backHome')}}">Home</a></li>
-                <li>
-                    <a href="{{route('backBlog')}}">Blog</a>
-                </li>
-                <li>
-                    <a href="{{route('backPortfolio')}}">Portfolio</a>                                
-                </li>
-
-            </ul><!-- /.navbar-nav -->
-        </div><!-- /.navbar-collapse -->
-        
-    </div>
-
-</nav><!-- /.site-navigation -->

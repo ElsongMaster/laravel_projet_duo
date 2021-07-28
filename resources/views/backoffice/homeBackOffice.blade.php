@@ -10,7 +10,10 @@
 </head>
 <body>
     @include('backoffice.navBarOffice')
-    @yield('backofficeContent')
+
+    <div class="container d-flex justify-content-center mt-5">
+        @yield('backofficeContent')
+    </div>
 
     <script src="{{asset('js/app.js')}}"></script>
 </body>

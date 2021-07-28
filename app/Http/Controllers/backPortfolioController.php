@@ -7,7 +7,7 @@ use App\Models\Projet;
 class backPortfolioController extends Controller
 {
     public function index() {
-        $table =  new Projet;
+        $table = new Projet;
         $datas = $table->get()->take(15);
     return view('backoffice.backPortfolio',compact('datas'));
 
@@ -17,10 +17,17 @@ class backPortfolioController extends Controller
     }
 
     public function store(Request $request){
-        $newEntry = Projet::all();
-        $newEntry->titre->$request->titre;
-        $newEntry->description->$request->description;
+        $newEntry = new Projet ;
+        $newEntry->titre = $request->titre;
+        $newEntry->description = $request->description;
+        $newEntry->image = $request->image;
         $newEntry->save();
         return redirect()->back();
     }
+    public function destroy($id) {
+        $datas = Projet::find($id);
+        $datas->delete();
+        return redirect()->back();
+    }
+
 }

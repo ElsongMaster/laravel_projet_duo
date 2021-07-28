@@ -24,7 +24,7 @@ use App\Http\Controllers\backPortfolioController;
 |
 */
 
-Route::get('/',[homeController::class,'index'] );
+Route::get('/',[homeController::class,'index'] )->name('home');
 
 Route::get('/blog',[blogController::class,'index'] );
 
@@ -36,12 +36,16 @@ Route::get('/contact',[contactController::class,'index'] )->name('contact');
 
 Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
 
-Route::get('/projets/create' , [backPortfolioController::class, 'create'])->name('create');
+Route::get('/projets/create' , [backPortfolioController::class, 'create'])->name('createProjet');
 
-Route::post('/projets', [portfolioController::class, 'store'])->name('store');
+Route::post('/projets' , [backPortfolioController::class, 'store'])->name('store');
 
-Route::delete('projets/{id}/delete' ,[portfolioController::class, 'destroy']);
+Route::post('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('delete');
 
 Route::get('/backoffice/home',[backHomeController::class, 'index'])->name('backHome');
 
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
+
+
+
+

@@ -25,9 +25,6 @@ class portfolioController extends Controller
         $newEntry->save();
         return redirect()->back();
     }
-    public function destroy(Projet $id) {
-        $datas = Projet::find($id);
-        $datas->delete();
-        return redirect()->back;
-    }
+    
+    
 }
