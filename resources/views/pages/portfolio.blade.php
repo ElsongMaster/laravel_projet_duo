@@ -13,7 +13,8 @@
         
         <div class="container-fluid">
             <div class="row" id="grid">
-                @foreach ($datas as $item)
+                @foreach ($datas as $item )
+                    
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
                         <img src="{{asset($item->image)}}" alt="" class="img-carousel">
@@ -28,6 +29,7 @@
                     </a>
                 </div><!-- /.col-lg-fifth  -->
                 @endforeach
+               
             </div><!-- /#grid -->
         </div>
         
