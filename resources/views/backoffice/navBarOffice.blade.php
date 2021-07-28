@@ -11,21 +11,17 @@
         <div class="main-menu" id="perfect-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                    <a href="/">Home</a></li>
+                    <a href="{{route('backHome')}}">Home</a></li>
                 <li>
-                    <a href="/blog">Blog </a>
+                    <a href="{{route('backBlog')}}">Blog</a>
                 </li>
                 <li>
-                    <a href="/portfolio">Portfolio</a>                                
+                    <a href="{{route('backPortfolio')}}">Portfolio</a>                                
                 </li>
-                <li>
-                    <a href="/contact">Contact</a>
-                </li> 
-                <li>
-                    <a href="{{route('backoffice')}}">BackOffice</a>
-                </li> 
 
             </ul><!-- /.navbar-nav -->
         </div><!-- /.navbar-collapse -->
+        
     </div>
+              
 </nav><!-- /.site-navigation -->

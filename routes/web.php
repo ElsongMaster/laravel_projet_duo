@@ -8,6 +8,7 @@ use App\Http\Controllers\contactController;
 use App\Http\Controllers\portfolioController;
 
 use App\Http\Controllers\blogController;
+use App\Http\Controllers\backofficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +25,14 @@ Route::get('/',[homeController::class,'index'] );
 
 Route::get('/blog',[blogController::class,'index'] );
 
-
 Route::get('/portfolio',[portfolioController::class,'index'] );
 
+Route::get('/backoffice',[backofficeController::class, 'index'])->name('backoffice');
 
-Route::get('/contact',[contactController::class,'index'] );
+Route::get('/contact',[contactController::class,'index'] )->name('contact');
 
+Route::get('/backoffice/portfolio', [portfolioController::class, 'index'])->name('backPortfolio');
 
+Route::get('/projets/create' , [portfolioController::class, 'create'])->name('create');
 
+Route::post('/projets', [portfolioController::class, 'store'])->name('store');
