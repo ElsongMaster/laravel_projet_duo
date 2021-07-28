@@ -29,3 +29,6 @@ Route::get('/portfolio',[portfolioController::class,'index'] );
 
 
 Route::get('/contact',[contactController::class,'index'] );
+
+
+
