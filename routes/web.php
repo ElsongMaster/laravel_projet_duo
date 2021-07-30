@@ -34,9 +34,10 @@ Route::get('/blog',[blogController::class,'index'] );
 Route::get('/portfolio',[portfolioController::class,'index'] );
 Route::get('/contact',[contactController::class,'index'] )->name('contact');
 Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
-Route::get('/projets/{id}/show',[backPortfolioController::class, 'show'])->name('showProjet');
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
+Route::get('/projets/{id}/show',[backPortfolioController::class, 'show'])->name('showProjet');
 Route::get('/articles/{id}/show',[backBlogController::class, 'show'])->name('showArticle');
+
 /*UPDATE*/
 Route::post('/articles',[backBlogController::class, 'store'])->name('storeArticle');
 Route::get('/articles/{id}/edit',[backBlogController::class, 'edit'])->name('editArticle');
