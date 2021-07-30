@@ -33,7 +33,6 @@ Route::get('/',[homeController::class,'index'] )->name('home');
 Route::get('/blog',[blogController::class,'index'] );
 Route::get('/portfolio',[portfolioController::class,'index'] );
 Route::get('/contact',[contactController::class,'index'] )->name('contact');
-Route::get('/backoffice',[backofficeController::class, 'index'])->name('backoffice');
 Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
 Route::get('/projets/{id}/show',[backPortfolioController::class, 'show'])->name('showProjet');
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');

@@ -45,6 +45,6 @@ class backBlogController extends Controller
 
     public function destroy(Article $id){
         $id->delete();
-        return redirect()->back();
+        return redirect(route('backBlog'));
     }
 }

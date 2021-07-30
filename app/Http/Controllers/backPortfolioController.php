@@ -41,7 +41,7 @@ class backPortfolioController extends Controller
     public function destroy($id) {
         $datas = Projet::find($id);
         $datas->delete();
-        return redirect('/backoffice/backPortfolio');
+        return redirect(route('backPortfolio'));
     }
     public function show(Projet $id){
         $projet = $id;
