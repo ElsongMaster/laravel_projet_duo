@@ -9,13 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{$item->titre}}</h5>
             <p class="card-text">{{$item->description}}</p>
-            <div class="container d-flex justify-content-between">
-                <form action="{{route('deleteArticle',$item->id)}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                <button class="btn btn-danger text-light" type="submit">delete</button>
-                </form>
-                        
+            <div class="container d-flex justify-content-between">          
             <a href="{{route('showArticle', $item->id)}}" class="btn btn-info">SHOW</a> 
         
             </div>

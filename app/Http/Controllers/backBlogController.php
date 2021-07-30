@@ -38,6 +38,10 @@ class backBlogController extends Controller
         return redirect(route('showArticle'));
 
     }
+    public function show(Article $id){
+        $article = $id;
+        return view('backoffice.layouts.showArticle', compact('article'));     
+    }
 
     public function destroy(Article $id){
         $id->delete();

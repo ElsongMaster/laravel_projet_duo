@@ -35,21 +35,29 @@ Route::get('/portfolio',[portfolioController::class,'index'] );
 Route::get('/contact',[contactController::class,'index'] )->name('contact');
 Route::get('/backoffice',[backofficeController::class, 'index'])->name('backoffice');
 Route::get('/backoffice/backPortfolio', [backPortfolioController::class, 'index'])->name('backPortfolio');
+Route::get('/projets/{id}/show',[backPortfolioController::class, 'show'])->name('showProjet');
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
-// show
-Route::get('/projets/{id}/show', [backPortfolioController::class, 'show'])->name('show');
-
+Route::get('/articles/{id}/show',[backBlogController::class, 'show'])->name('showArticle');
 /*UPDATE*/
-
 Route::post('/articles',[backBlogController::class, 'store'])->name('storeArticle');
-Route::get('/articles/edit',[backBlogController::class, 'edit'])->name('editArticle');
+Route::get('/articles/{id}/edit',[backBlogController::class, 'edit'])->name('editArticle');
 Route::put('/articles/{id}/update',[backBlogController::class, 'update'])->name('updateArticle');
 Route::post('/projets' , [backPortfolioController::class, 'store'])->name('store');
-Route::get('/projets/edit', [backPortfolioController::class, 'edit'])->name('editProjet');
-Route::put('/projet/{id}/update',[backBlogController::class, 'update'])->name('updateProjet');
+Route::get('/projets/{id}/edit', [backPortfolioController::class, 'edit'])->name('editProjet');
+
 /*DELETE*/
-Route::delete('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('deleteProjet');
+Route::post('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('deleteProjet');
 Route::delete('/articles/{id}/delete',[backBlogController::class, 'destroy'])->name('deleteArticle');
+
+
+
+
+
+
+
+
+
+
 
 
 
