@@ -24,6 +24,20 @@ class backPortfolioController extends Controller
         $newEntry->save();
         return redirect()->back();
     }
+
+    public function edit(Projet $id) {
+        $projet = $id;
+    return view('backoffice.layouts.editArticle',compact('projet'));
+}
+    public function update(Projet $id, Request $resquest) {
+        $projet = $id;
+        $projet->titre = $request->titre;
+        $projet->image = $request->image;
+        $projet->description = $request->description;
+        $projet->save();
+        return redirect(route('showProjet'));
+
+    }
     public function destroy($id) {
         $datas = Projet::find($id);
         $datas->delete();

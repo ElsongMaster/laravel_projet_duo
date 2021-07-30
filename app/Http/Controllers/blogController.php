@@ -14,4 +14,6 @@ class blogController extends Controller
         $datas = $table->get()->take(4);
     return view('pages.blog',compact('datas'));
 }
+
+
 }
