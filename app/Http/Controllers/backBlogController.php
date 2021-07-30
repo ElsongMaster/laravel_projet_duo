@@ -25,6 +25,19 @@ class backBlogController extends Controller
         $newEntry->save();
         return redirect()->back();
     }
+    public function edit(Article $id) {
+        $article = $id;
+    return view('backoffice.layouts.editArticle',compact('article'));
+}
+    public function update(Article $id, Request $resquest) {
+        $article = $id;
+        $article->titre = $request->titre;
+        $article->image = $request->image;
+        $article->description = $request->description;
+        $article->save();
+        return redirect(route('showArticle'));
+
+    }
 
     public function destroy(Article $id){
         $id->delete();
