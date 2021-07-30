@@ -29,7 +29,7 @@ class backBlogController extends Controller
         $article = $id;
     return view('backoffice.layouts.editArticle',compact('article'));
 }
-    public function update(Article $id, Request $resquest) {
+    public function update(Article $id, Request $request) {
         $article = $id;
         $article->titre = $request->titre;
         $article->image = $request->image;
