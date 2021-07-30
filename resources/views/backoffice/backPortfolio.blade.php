@@ -3,13 +3,16 @@
 
 @section('backofficeContent')
 <table class="table">
+  <div>
+    <a href="{{route('createProjet')}}" class="btn btn-primary">Create</a>
+  </div>
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titre</th>
         <th scope="col">Description</th>
-        <th class="col">Delete</th>
-        <th class="col">Create</th>
+        <th class="col">Show</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -19,13 +22,7 @@
         <td>{{$item->titre}}</td>
         <td>{{$item->description}}</td>
         <td>
-          <form action="{{route('delete', $item->id)}}" method="POST">
-            @csrf
-            <button type="submit" class="btn bg-danger">DELETE</button>
-          </form>
-        </td>
-        <td>
-          <a href="{{route('createProjet')}}" class="btn btn-primary">Create</a>
+            <a href="{{route('show', $item->id)}}" class="btn btn-info">SHOW</a> 
         </td>
       </tr>
       @endforeach

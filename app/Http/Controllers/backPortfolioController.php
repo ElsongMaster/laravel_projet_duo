@@ -29,5 +29,9 @@ class backPortfolioController extends Controller
         $datas->delete();
         return redirect()->back();
     }
+    public function show(Projet $id){
+        $projects = $id;
+        return view('layouts.showData', compact('projects'));     
+    }
 
 }

@@ -25,6 +25,7 @@ class portfolioController extends Controller
         $newEntry->save();
         return redirect()->back();
     }
+   
     
     
 }

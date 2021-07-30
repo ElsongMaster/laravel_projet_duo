@@ -40,11 +40,14 @@ Route::get('/projets/create' , [backPortfolioController::class, 'create'])->name
 
 Route::post('/projets' , [backPortfolioController::class, 'store'])->name('store');
 
-Route::post('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('delete');
+Route::post('/projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('delete');
 
 Route::get('/backoffice/home',[backHomeController::class, 'index'])->name('backHome');
 
 Route::get('/backoffice/blog',[backBlogController::class, 'index'])->name('backBlog');
+
+// show
+Route::get('/projets/{id}/show', [backPortfolioController::class, 'show'])->name('show');
 
 
 
