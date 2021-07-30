@@ -16,5 +16,10 @@
         </div>
         </div>
         @endforeach
+
+          <div class="d-flex justify-content-center my-5">
+    <a href="{{route('createArticle')}}" class="btn btn-warning  w-25">Create</a>
+  </div>
+
     </section>
 @endsection

@@ -2,10 +2,9 @@
 @extends('backoffice.homeBackOffice')
 
 @section('backofficeContent')
-<table class="table">
-  <div>
-    <a href="{{route('createProjet')}}" class="btn btn-primary">Create</a>
-  </div>
+<section class="d-flex flex-column justify-content-center">
+  <table class="table">
+
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -26,6 +25,11 @@
         </td>
       </tr>
       @endforeach
+
     </tbody>
   </table>
+      <div class="d-flex justify-content-center my-5">
+      <a href="{{route('createProjet')}}" class="btn btn-warning  w-25">Create</a>
+    </div>
+</section>
 @endsection
