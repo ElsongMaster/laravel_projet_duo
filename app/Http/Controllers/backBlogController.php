@@ -21,7 +21,7 @@ class backBlogController extends Controller
         $newEntry = new Article;
         $newEntry->titre = $request->titre;
         $newEntry->image = $request->image;
-        $newEntry->description = $request->desription;
+        $newEntry->description = $request->description;
         $newEntry->save();
         return redirect()->back();
     }
