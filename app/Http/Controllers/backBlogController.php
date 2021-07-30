@@ -35,7 +35,7 @@ class backBlogController extends Controller
         $article->image = $request->image;
         $article->description = $request->description;
         $article->save();
-        return redirect(route('showArticle'));
+        return redirect(route('show'));
 
     }
 

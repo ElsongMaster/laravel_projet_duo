@@ -6,7 +6,7 @@
             <div class="card-body">
                 <h5 class="card-text">Nom:{{$projet->titre}}</h5>
                 <p class="card-text">Age : {{$projet->description}}</p>
-                <form action="{{route('delete', $projet->id)}}" method="POST">
+                <form action="{{route('deleteArticle', $projet->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-warning">DELETE</button>

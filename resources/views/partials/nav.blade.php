@@ -22,7 +22,7 @@
                     <a href="/contact">Contact</a>
                 </li> 
                 <li>
-                    <a href="{{route('backoffice')}}">BackOffice</a>
+                    <a href="{{route('backBlog')}}">BackOffice</a>
                 </li> 
 
             </ul><!-- /.navbar-nav -->

@@ -45,7 +45,7 @@ class backPortfolioController extends Controller
     }
     public function show(Projet $id){
         $projet = $id;
-        return view('layouts.showData', compact('projet'));     
+        return view('backoffice.layouts.showData', compact('projet'));     
     }
 
 }
