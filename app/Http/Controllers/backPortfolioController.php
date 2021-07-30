@@ -35,7 +35,7 @@ class backPortfolioController extends Controller
         $projet->image = $request->image;
         $projet->description = $request->description;
         $projet->save();
-        return redirect(route('showProjet'));
+        return redirect(route('showProjet',$projet->id));
 
     }
     public function destroy($id) {
