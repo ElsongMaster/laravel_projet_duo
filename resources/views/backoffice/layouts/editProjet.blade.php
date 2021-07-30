@@ -4,9 +4,9 @@
 <form action="{{route('updateProjet',$projet->id)}}" method="post">
 @csrf
 @method('PUT')
-titre: <input type="text" name="titre">
-description: <input type="text" name="description">
-image: <input type="text" name="image">
+Titre: <input type="text" value="{{$projet->titre}}" name="titre">
+Description: <input type="text"value="{{$projet->description}}" name="description">
+Image: <input type="text" value="{{$projet->image}}" name="image">
 
 <button class="btn btn-warning text-light">Submit</button>
 </form>
