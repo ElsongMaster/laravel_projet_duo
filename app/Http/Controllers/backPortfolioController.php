@@ -29,7 +29,7 @@ class backPortfolioController extends Controller
         $projet = $id;
     return view('backoffice.layouts.editArticle',compact('projet'));
 }
-    public function update(Projet $id, Request $resquest) {
+    public function update(Projet $id, Request $request) {
         $projet = $id;
         $projet->titre = $request->titre;
         $projet->image = $request->image;
@@ -44,8 +44,8 @@ class backPortfolioController extends Controller
         return redirect()->back();
     }
     public function show(Projet $id){
-        $projects = $id;
-        return view('layouts.showData', compact('projects'));     
+        $projet = $id;
+        return view('layouts.showData', compact('projet'));     
     }
 
 }
