@@ -27,7 +27,7 @@ class backPortfolioController extends Controller
 
     public function edit(Projet $id) {
         $projet = $id;
-    return view('backoffice.layouts.editArticle',compact('projet'));
+    return view('backoffice.layouts.editProjet',compact('projet'));
 }
     public function update(Projet $id, Request $request) {
         $projet = $id;

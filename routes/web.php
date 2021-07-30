@@ -44,6 +44,7 @@ Route::get('/articles/{id}/edit',[backBlogController::class, 'edit'])->name('edi
 Route::put('/articles/{id}/update',[backBlogController::class, 'update'])->name('updateArticle');
 Route::post('/projets' , [backPortfolioController::class, 'store'])->name('store');
 Route::get('/projets/{id}/edit', [backPortfolioController::class, 'edit'])->name('editProjet');
+Route::put('/projets/{id}/update',[backPortfolioController::class, 'update'])->name('updateProjet');
 
 /*DELETE*/
 Route::post('projets/{id}/delete' ,[backPortfolioController::class, 'destroy'])->name('deleteProjet');
