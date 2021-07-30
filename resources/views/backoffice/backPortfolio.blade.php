@@ -22,7 +22,7 @@
         <td>{{$item->titre}}</td>
         <td>{{$item->description}}</td>
         <td>
-            <a href="{{route('show', $item->id)}}" class="btn btn-info">SHOW</a> 
+            <a href="{{route('showProjet', $item->id)}}" class="btn btn-info">SHOW</a> 
         </td>
       </tr>
       @endforeach

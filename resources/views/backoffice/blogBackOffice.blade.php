@@ -15,7 +15,9 @@
                     @method('DELETE')
                 <button class="btn btn-danger text-light" type="submit">delete</button>
                 </form>
-                <a href="{{route('createArticle')}}" class="btn btn-primary text-light">create</a>
+                        
+            <a href="{{route('showArticle', $item->id)}}" class="btn btn-info">SHOW</a> 
+        
             </div>
         </div>
         </div>
