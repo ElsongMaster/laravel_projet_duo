@@ -3,8 +3,10 @@
 @section('backofficeContent')
     <div class="container d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
+            <img src="{{asset($article->image)}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-text">Nom:{{$article->titre}}</h5>
+                <h5 class="card-text">ID:{{$article->id}}</h5>
                 <p class="card-text">Age : {{$article->description}}</p>
                 <form action="{{route('deleteArticle', $article->id)}}" method="POST">
                     @csrf
